@@ -1,8 +1,8 @@
 # 完整的文档地址：https://ansible-tran.readthedocs.io/en/latest/index.html
 
 # installation
- ## 依赖：python2.7
- ## 安装完验证：ansible --version
+  依赖：python2.7
+  安装完验证：ansible --version
  
 # 部署机器准备工作
  ## ssh免登陆设置
