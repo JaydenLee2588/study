@@ -1,1 +1,12 @@
+打开多个窗口，保留一个窗口，关闭其他窗口
+default_handle = driver.current_window_handle
+handles = list(driver.window_handles)
+assert len(handles) > 1
 
+handles.remove(default_handle)
+assert len(handles) > 0
+
+driver.switch_to_window(handles[0])
+# do your stuffs
+driver.close()
+driver.switch_to_window(default_handle)
