@@ -1,0 +1,20 @@
+一、 下载、配置与安装
+1. 官网下载社区版https://www.sonarqube.org/downloads/，解压。
+2. 配置：
+  linux服务器创建用户sonar（为了方便，加入root组），将sonar文件夹的owner改为sonar（chown -R sonar:root sonar_folder）
+  mysql服务器新建数据库名：sonar
+  编辑conf目录下的sonar.properties文件，找到mysql，编辑或加入：
+  #sonar是在mysql中新建的数据库
+  sonar.jdbc.url=jdbc:mysql://localhost:3306/sonar?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&useConfigs=maxPerformance
+  sonar.jdbc.username=sonar 
+  sonar.jdbc.password=‘password’ 
+  sonar.sorceEncoding=UTF-8
+  #sonar控制台管理员
+  sonar.login=admin
+  sonar.password=admin
+3. 启动：到bin目录下找到对应系统的文件夹里，执行sonar.sh start命令。
+  稍等一下，在浏览器访问http://ip:9000，如果访问失败的话，查看日志是否有报错。（linux记得要开放防火墙端口）
+4. 汉化包安装：https://github.com/SonarQubeCommunity/sonar-l10n-zh/tree/master/src，找到对应版本的汉化包，到release里去下载。
+   将汉化包拷贝sonarqube-5.6\extensions\plugins，重启sonarqube即可。
+   
+二、 配置
