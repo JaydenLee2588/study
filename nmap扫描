@@ -1,0 +1,18 @@
+nmap扫描工具：
+nmap -PE 192.168.0.1-255 获取某个
+nmap -sP 192.168.0.1-255 发现存活主机
+
+nmap -O ip 扫描主机的操作系统
+
+nmap -sV ip 扫描主机开放的服务
+
+nmap --iflist 查看本地路由和接口
+
+nmap -e mac地址 ip地址 （使用指定网络接口做扫描）
+
+nmap -p1-25,80,512-515,2001,4001,6001,9001 ip (扫描思科路由器)
+nmap -sU -p69 -nvv ip (扫描路由器的tftp协议，69通常是路由器的tftp协议端口）
+nmap -O -F -n ip (-F 快速扫描一些常见的端口)
+
+nmap --script=brute ip (暴力破解)
+参考资料：http://drops.wooyun.org/tips/2188
