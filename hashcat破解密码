@@ -1,0 +1,6 @@
+查看kali内置的字典文件： locate wordlist
+
+linux系统的密码破解：
+1. 密码hash文件：/etc/shadow
+2. 获取加密类型：/etc/login.defs，查找“ENCRYP_METHOD”值（在文件的83%处），就是加密方法。
+3. 破解hash： hashcat -m 1800 -a 0 -o outfile.txt /path/wordlist.txt
