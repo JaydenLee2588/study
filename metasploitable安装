@@ -1,0 +1,5 @@
+下载：https://sourceforge.net/projects/metasploitable/
+
+修改配置：默认下载后的系统有一个配置错误。
+修改文件：/var/www/mutillidae/config.inc
+    dbname=owasp10
