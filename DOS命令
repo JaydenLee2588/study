@@ -1,0 +1,50 @@
+color：改变cmd颜色
+systeminfo：查看系统信息。查看补丁包安装情况，将安装的补丁列表拷贝到溢出提权工具“getroot-tool”里，就可以查出可以利用的漏洞。
+ipconfig /release 是否ip地址
+ipconfig /renew 重新获取ip地址
+ipconfig /flushdns
+
+arp -a 查看arp表，arp欺骗相关。
+
+net view 查看局域网计算机列表
+
+shutdown 关机
+
+start 打开文件或者网页
+type 打印文件
+copy con c:\a.txt 打开输入流，写入内容，ctrl+z关闭保存
+md 创建文件夹
+rd 删除文件夹
+ren 改文件名
+del 删除文件
+copy 拷贝文件
+move 移动文件
+tree 打印文件树列表
+
+telnet 远程连接，也可以用来侦测对方机器某端口是否开放。
+
+net use k:\\192.168.1.1\c$ ： 添加网络映射某机器的共享盘
+net use k:\\192.168.1.1\c$ del : 删除映射
+net start：查看系统开启了那些服务。
+net start "服务名" ： 启动服务
+net stop "服务名" : 停止服务
+
+net user ： 查看系统用户列表
+net user username ： 查看用户信息
+net user username password /add : 新建用户
+net user username password : 修改密码
+net user username /active:yes : 激活用户
+net user username /active:no : 激活用户
+
+net localgroup ：查看系统组列表
+net localgroup administrators ： 查看administrators组信息和用户列表
+net localgroup administrators guest /add : 将guest用户添加到administrators组
+
+net share : 查看本地开启的共享
+net share c$ /del : 删除C盘共享
+
+netstat -an : 查看开启了哪些端口和网络连接状态
+
+at ： 查看计划任务
+
+netsh：网络命令
