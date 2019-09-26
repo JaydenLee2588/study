@@ -24,7 +24,7 @@ penetration test是指从一个 攻击者的角度来检查和审核一个网络
 3. 旁站和C段：
 旁站，指和目标网站在同一台服务器上的其他的网站。攻破了旁站，也就算攻破了目标，因为获取到服务器的权限
 C段，指和目标网站在同一个网段的其他网站。通常在没有办法直接攻破目标的时候，曲线救国的一种方法。会增加很多工作量。
-神器: http://www.webscan.cc
+神器: http://www.webscan.cc   www.5kik.com/c
 4. 子域名信息
 子域名搜集的越完整，挖到的漏洞可能越多
 子域名工具：
@@ -35,9 +35,20 @@ C段，指和目标网站在同一个网段的其他网站。通常在没有办�
  6. CMS类型：有了目标CMS，就可以利用相关的bug进行测试，进行代码审计
  7. 端口信息 
  8. 服务器与中间件信息
+敏感目录：
+  收集方向： 
+    robots.txt，
+    后台目录：admin等，爆破目录
+    安装包：www.rar，wwwroot.rar.zip，beifen.rar，1.rar，更换后缀名：zip，tar.gz等；
+    mysql管理入口：phpmyadmin，pmd，pma，phadmin，phpmyadmin等；
+    phpinfo：探测php信息，php版本，php开放功能，服务器目录等；
+    编辑器：
+    iis短文件：
+  常用工具：
+    字典爆破：
 工具集：
 DirBuster，layer，御剑，御剑后台扫描工具，御剑无字典大小限制版，subDomainBrute，IIS短文件名漏洞利用工具，ScanPort，nmap，中国菜刀
-
+www.yunsee.cn
 
 SQL注入：
 靶机：dvwa
