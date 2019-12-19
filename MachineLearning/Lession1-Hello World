@@ -1,0 +1,21 @@
+Machine Learning初体验：
+开源库：
+scikit learn
+Tensor Flow
+
+总体来说，ML分三部分：
+1. collect trainning data
+2. train Classifier
+3. make Predictions
+
+import sklearn
+features = [[140, 1], [130, 1], [150, 0], [170, 0]]
+labels = ['a', 'a', 'b', 'b']
+clf = tree.DecisionTreeClassifier()
+clf = clf.fit(features, labels)
+print(clf.predict([[155, 0]])
+
+程序解释：
+features和label分别代表特征和对应的标签，
+clf是定义一个classifier，然后调用fit方法传入feature和labels来对其进行training
+最后调用predict方法对目标变量make prediction。
