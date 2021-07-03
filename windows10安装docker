@@ -1,1 +1,8 @@
-我安装的docker版本是3.5.1，操作系统是
+我安装的docker版本是3.5.1，操作系统是win10家庭版。（课程里老师说的win10家庭版安装不了，猜测应该是大版本为2的docker安装不了）
+安装docker的过程中会安装WSL2，安装完成后docker启动WSL报错，故又手动安装WSL2(https://docs.microsoft.com/zh-cn/windows/wsl/install-win10).
+Linux内核我选择的是Ubuntu20。安装完WSL2后要做以下设置：
+  管理员打开PowerShell，执行命令：
+    fsutil behavior set disableencryption 1
+    fsutil behavior set disablecompression 1
+  然后重启计算机。
+Docker启动正常。
