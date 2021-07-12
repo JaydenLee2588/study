@@ -1,0 +1,10 @@
+/* 查看docker信息 */
+docker version
+docker info
+
+/* 镜像管理 */
+docker images     //查看服务器的docker镜像列表
+docker search nginx -f stars=10  //查找docker镜像，过滤条件 - star数大于10.
+docker pull jenkins/jenkins   // 拉取镜像
+docker save nginx > nginx.tar 		// 导出保存镜像
+docker load < nginx.tar			// 导入保存镜像

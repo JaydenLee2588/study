@@ -1,0 +1,10 @@
+master节点：
+docker run --name jenkins -d -p 8080:8080 -p 50000:50000 -v \d\docker\jenkins:/var/jenkins_home jenkins/jenkins
+
+slave节点：
+
+
+
+大体量的微服务项目，如何保证持续集成系统的性能和稳定性：
+1. jenkins的label功能，集群上打上不同的label，提交任务的时候a明确申明自己需要什么样的节点。（缺点：没有检查节点的健康状态和节点任务的复杂度）
+2. jenkins和k8s集成，Jenkins启动任务的时候，向k8s申请创建一个agent来执行任务。（jenkins安装k8s插件）

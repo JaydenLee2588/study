@@ -18,3 +18,7 @@
    将汉化包拷贝sonarqube-5.6\extensions\plugins，重启sonarqube即可。
    
 二、 配置
+
+1. sonaqube里创建project，
+2. 创建token
+3. 
