@@ -1,10 +1,13 @@
-/* ²é¿´dockerĞÅÏ¢ */
+/* æŸ¥çœ‹dockerä¿¡æ¯ */
 docker version
 docker info
 
-/* ¾µÏñ¹ÜÀí */
-docker images     //²é¿´·şÎñÆ÷µÄdocker¾µÏñÁĞ±í
-docker search nginx -f stars=10  //²éÕÒdocker¾µÏñ£¬¹ıÂËÌõ¼ş - starÊı´óÓÚ10.
-docker pull jenkins/jenkins   // À­È¡¾µÏñ
-docker save nginx > nginx.tar 		// µ¼³ö±£´æ¾µÏñ
-docker load < nginx.tar			// µ¼Èë±£´æ¾µÏñ
+/* é•œåƒç®¡ç† */
+docker images     //æŸ¥çœ‹æœåŠ¡å™¨çš„dockeré•œåƒåˆ—è¡¨
+docker search nginx -f stars=10  //æŸ¥æ‰¾dockeré•œåƒï¼Œè¿‡æ»¤æ¡ä»¶ - staræ•°å¤§äº10.
+docker pull jenkins/jenkins   // æ‹‰å–é•œåƒ
+docker save nginx > nginx.tar 		// å¯¼å‡ºä¿å­˜é•œåƒ
+docker load < nginx.tar			// å¯¼å…¥ä¿å­˜é•œåƒ
+docker rmi busyboxï¼šlatest   // åˆ é™¤é•œåƒ
+docker tag busyboxï¼šlatest busybox:v1.0  //æ›´æ”¹é•œåƒå
+docker history busybox    // æŸ¥çœ‹é•œåƒåˆ›å»ºå†å²
