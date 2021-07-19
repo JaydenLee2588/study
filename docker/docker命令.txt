@@ -11,3 +11,19 @@ docker load < nginx.tar			// 导入保存镜像
 docker rmi busybox：latest   // 删除镜像
 docker tag busybox：latest busybox:v1.0  //更改镜像名
 docker history busybox    // 查看镜像创建历史
+
+/* 容器管理 */
+docker run -d --name busybox busybox:lastest ping 127.0.0.1.  // 后台运行busybox，容器名为busybox
+docker ps, docker ps -a  //查看容器
+docker top busybox   // 查看容器中运行的进程
+docker stats busybox // 查看容器资源占有
+docker start/stop/restart/pause/unpause/kill busybox   // 容器操作
+docker rm -f busybox    //强制删除容器
+docker exec -it busybox ls  // 执行容器里的命令，也可以进入容器（将ls改成sh）
+docker cp source destiny // 本地和容器之间拷贝文件，容器的地址要加容器名前缀docker cp container:/tmp/a.txt /tmp
+docker logs busybox.  // 查看容器的日志，需要持续打印最新日志，加“-f”
+docker inspect busybox. //查看镜像元信息。如果要查看某些信息，使用-f参数，例如：docker inspect -f '{{.Id}}' busybox
+docker diff busybox  //查看容器内文件结构改动
+
+docker run -p 80:80 nginx // 端口映射
+docker run -v src_file:dest_file //文件映射
