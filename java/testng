@@ -1,1 +1,50 @@
+testng的执行流程：
+@BeforeSuite
+@BeforeTest
+@BeforeClass
+@BeforeMethod
+@Test
+@AfterMethod
+@AfterClass
+@AfterTest
+@AfterSuite
 
+跳过某些测试用例：@Test(enabled=false)
+
+在testNG中，组group的概念主要是相对于测试方法而言的。将具有相似功能的测试方法分组，这样在等一测试用例的时候就可以以组为单位加入对应的测试方法。一个测试方法可以属于多个组。通过以下两步设置方法：
+1. 代码注解：@Test(groups={"group1", "group2"})
+2. xml配置文件中：
+	<suite name="suite01">
+	    <test verbose="2" name="TestGroup">
+		<group>
+		    <run>
+		        <include name="group1">
+		        <exclude name="group2">
+		    </run>
+		</group>
+		<classes>
+		    <class name="example.DemoGroup">
+		</classes>
+	    </test>
+	</suite>
+@BeforeGroup和@AfterGroup的用法：
+
+决定测试执行的顺序的方法：
+1. 
+
+
+依赖控制：
+@Test(dependsOnMethods = {"methos1", "method2"})
+
+某个测试方法需要多次执行：
+@Test(invocationCount=5, threadPoolSize=3, timeOut=10000)
+invocationCount:执行的次数
+threadPoolSize:执行的线程数
+timeOut：超时时间
+
+
+参数化问题：
+第一步，定义个DataProvider
+@DataProvider(name = "provider")
+public Object[][] list 
+@Test(dataProvider = "")
