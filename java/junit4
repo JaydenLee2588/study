@@ -1,0 +1,39 @@
+@Test
+@BeforeClass
+@AfterClass
+@Before
+@After
+@Ignore
+
+四个概念：
+1. 测试方法：用@Test注解的一些函数
+2. 测试类：包含一个或者多个测试方法的**Test.java文件
+3. 测试集：suite，包含多个测试类
+4. 测试运行器@Runwith：决定了用什么方式偏好去运行这些测试集/类/方法
+
+常见的运行器：
+@Runwith：放在测试类名之前，用类确定这个类怎么运行的。也可以不标注，会使用默认运行器。常见的运行器有：
+1. @RunWith(Parameterized.class)参数运行器，配合@Parameters使用JUnit的参数化功能
+2. @RunWith(Suite.class) 测试集运行器，配合使用测试集功能
+	代码示例：
+	@RunWith(Suite.class)
+	@Suite.SuiteClasses({
+		//此处类的配置顺序会影响执行顺序
+		JUnitTest1.class,
+		JUnitTest2.class
+	})
+	public class JunitSuite{
+	}
+
+3. @RunWith(Junit4.class)，junit4的默认运行器
+4. 一些其他运行器具备更多功能。例如@RunWith(SpringJUnit4ClassRunner.class)继承了spring的一些功能
+
+
+测试类必须以Test结尾，否则用一下两种解决方法：
+1. 用mvn命令执行的就需要指定测试类（mvn test -Dtest=testcase.junit4Demo）
+2. mvn test默认使用的是surefire插件，在pom文件里添加surefire插件的设置。
+
+技巧：
+如果多个测试类有依赖关系，例如登陆，购买，那么可以设置一个BaseTest类，里面放一个静态的hashmap变量来保存用户的登陆信息。其他类继承这个BaseTest类
+
+

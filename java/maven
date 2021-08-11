@@ -1,0 +1,5 @@
+mvn clean : 删除target文件夹
+mvn package：打包
+mvn test：执行test用例
+mvn install -DskipTests -pProd： 打包，并且发布到本地仓库
+mvn deploy：打包，并且发布到本地仓库和远程仓库

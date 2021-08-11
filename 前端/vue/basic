@@ -1,0 +1,12 @@
+安装步骤：
+1. 安装nodejs
+2. npm install -g @vue/cli
+
+基本命令：
+v-if和v-else：判断条件
+v-show：元素是否显示
+v-for：循环
+v-on：绑定事件
+v-bind：绑定属性
+v-module：绑定数据
+
