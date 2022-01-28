@@ -1,0 +1,60 @@
+ 标签选择器 */
+span {
+	color: skyblue;
+}
+
+/*id选择器*/
+#id1 {
+	background-color: yellow;
+}
+
+/* class选择器 */
+.class1 {
+	background-color: green;
+}
+.class2 {
+	font-size: 20px;
+}
+
+/* 属性选择器 */
+[id="id3"] {
+	background-color: purple;
+}
+
+/* 通配符选择器 */
+* {
+	background-color: green;
+}
+
+/*父子选择器 or 派生选择器
+	1. 父子选择器不一定要用标签选择器，只要是选择器就行。
+	2. 父子选择器不是说必须是父子关系
+	3. 浏览器通常是从右向左解析父子选择器
+*/
+div em {
+	background-color: skyblue;
+}
+
+/* 直接子元素选择器 */
+div > em {
+	font-size: 20px;
+}
+
+/*并列选择器*/
+
+
+/* 选择器权重优先级：
+			标签名					权重值
+		!important最高 				infinity
+		行间样式						1000
+		id选择器						100
+		class选择器|属性选择器|伪类 	10
+		标签选择器|伪元素				1
+		通配符选择器					0
+		
+		注意：
+		1. 权重值的进制是256位
+		1. 行间样式 > id选择器 > class选择器 | 属性选择器 > 标签选择器 > 通配符选择器
+		2. class选择器和属性选择器，后来者权重高
+		3. ！important最高
+*/

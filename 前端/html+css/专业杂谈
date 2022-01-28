@@ -1,0 +1,10 @@
+1. 主流浏览器和内核
+浏览器		内核
+IE			trident
+Firefox		Gecko
+Chrome		Webkit/blink
+Safari		Webkit
+Opera		Presto
+
+2. 网页三剑客：
+html-结构，css-样式，JavaScript-行为

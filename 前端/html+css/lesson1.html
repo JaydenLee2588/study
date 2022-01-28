@@ -1,0 +1,117 @@
+<html lang="en"> <!-- lang告诉搜索引擎爬虫，我们的网站是关于什么内容的。SEO的一个知识点-->
+<head>
+		<meta charset="utf-8">
+		<title>淘宝网，淘，呸</title>
+</head>
+
+<body>
+	<div id="top"></div> <br>
+	<!-- h标签作用：独成一段，更改字体大小，加粗字体，-->
+	<h1>标题</h1> 
+	<h2>标题</h2> 
+	<h3>标题</h3> 
+	<h4>标题</h4> 
+	<h5>标题</h5> 
+	<h6>标题</h6> 
+
+	<p>段落</p>
+	<strong>加粗</strong> <!-- 加粗 -->
+	<em>加粗</em> <!-- 加粗 -->
+	<del>原价</del>  <!-- 中划线 -->
+
+	<p><strong><em>独成一行，加粗，斜体</em></strong></p>
+
+	<address>黑龙江</address>  <!-- 独成一段，斜体，-->
+
+
+	<!-- 最重要的两个标签：容器-->
+	<div>
+		<span>life is shit,美好的生活</span>
+	</div>
+
+
+	<!-- html编码： "&;" -->
+	jayden &nbsp;&nbsp;&nbsp; 很帅 <!-- 空格，html文档里的空格和回车符都是字符分割符，多个空格之显示成一个空格 -->
+	接下来jayden讲解一个标签&lt;div&gt; <!-- 尖括号 -->
+	
+	<br> 换行符
+
+	<!-- 有序列表 （很少用到）
+		type有5个取值：1，a, A, i(罗马数字)， I(大写罗马数字) 
+		reversed 倒序排序
+		start 排序起始值,第几个数字
+	-->
+	<ol type="a" reversed="reversed" start="3">
+		<li>marvel</li>
+		<li>disney</li>
+		<li>netflix</li>
+	</ol><br>
+
+	<!-- 无序列表 (经常用到，场景：一个大功能有几项子功能组成，每个子功能的功能和样式基本上相同，只是内容稍有差别，这样的情况就用ul和li来展现。例如导航栏)
+		type属性：列表符号，disc(默认值)，square，circle，等等
+	-->
+	<ul type="square">
+		<li>天猫</li>
+		<li>聚划算</li>
+		<li>天猫超市</li>
+	</ul><br>
+
+
+	<!-- image 
+		src属性：
+			1. 网上url
+			2. 本地绝对路径
+			3. 本地相对路径
+		alt属性： 图片展示不出来的情况下，代替显示的文字
+
+	-->
+	<img src="http://img.21zw.net/upload/55982/2020/11-06/20201106174355980354_small.jpg" style="height:200px" alt="这是美女">
+	<img src="c:\study\html\download.jpg" style="height:200px">
+	<img src="download.jpg" style="height:200px">
+	<br>
+
+	<!-- a 
+		作用：
+			1. 超链接
+			2. 页面锚点
+			3. 打电话(tel，移动端常用)，发邮件（mailto）  
+			4. 协议限定符（不常用）
+		href属性：超链接地址
+		target属性：_blank 新窗口打开
+	-->
+	<a href="http://www.google.com" target="_blank">谷歌</a>
+	<a href="#top">回到顶部</a>
+	<a href="tel:186xxxxxxxx" >给客服打电话</a>
+	<a href="mailto:cs@aaa.com" >给客服发邮件</a>
+	<a href="javascript:while(1){alert('叫你手欠')}" > come on! 点我试试</a>
+	<br>
+
+	<!-- form表单
+		method属性：get/post
+		action属性：请求地址
+		
+	-->
+	<form method="get" action="">
+		name:<input type="text" name="name" >
+		password:<input type="password" name="password">
+
+		性别
+		<input type="radio" name="gender" value="m" checked="checked">男
+		<input type="radio" name="gender" value="f">女
+		<input type="radio" name="gender" value="s">保密
+
+		喜欢的运动：
+		<input type="checkbox" name="sports" value="tennis" checked="checked">网球
+		<input type="checkbox" name="sports" value="golf">高尔夫
+		<input type="checkbox" name="sports" value="badminton">羽毛球
+		
+		省份：
+		<select name="province">
+			<option>beijing</option>
+			<option>tianjin</option>
+			<option>shanghai</option>
+		</select>
+		<input type="submit" value="提交">
+	</form>
+</body>
+</html>
